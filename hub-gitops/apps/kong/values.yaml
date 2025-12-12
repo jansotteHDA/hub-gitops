@@ -1,0 +1,17 @@
+env:
+  database: "off"
+
+ingressController:
+  enabled: true
+
+proxy:
+  type: ClusterIP
+
+admin:
+  enabled: true
+  type: ClusterIP
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
