@@ -10,8 +10,21 @@ spec:
     chart: kong
     targetRevision: 2.46.0
     helm:
-      valueFiles:
-        - values.yaml
+      helm:
+        values: |
+          env:
+            database: "off"
+          ingressController:
+            enabled: true
+          proxy:
+            type: NodePort
+          admin:
+            enabled: true
+            type: ClusterIP
+          manager:
+            enabled: true
+            type: NodePort
+
   destination:
     server: https://kubernetes.default.svc
     namespace: kong
