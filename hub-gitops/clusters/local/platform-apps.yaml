@@ -43,6 +43,8 @@ spec:
           enabled: true
         alertmanager:
           enabled: false
+        prometheus-node-exporter:
+          enabled: false
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
