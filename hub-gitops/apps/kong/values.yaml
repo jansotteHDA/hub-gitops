@@ -5,12 +5,16 @@ ingressController:
   enabled: true
 
 proxy:
-  type: ClusterIP
+  type: NodePort
 
 admin:
   enabled: true
   type: ClusterIP
 
+manager:
+  enabled: true
+  type: NodePort
+  
 resources:
   requests:
     cpu: 100m
